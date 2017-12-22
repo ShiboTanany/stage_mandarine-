@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!-- /**
+* DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER. Copyright 1997-2016 NTG Clarity and/or its affiliates. All
+* rights reserved. NTG CLARITY is a leader in delivering network, telecom, IT and infrastructure solutions to network
+* service providers and medium and large enterprises. www.ntgclarity.com The contents of this file are subject to the
+* terms of "NTG Clarity License". You must not use this file except in compliance with the License. You can obtain a
+* copy of the License at http://www.ntgclarity.com/ See the License for the specific language governing permissions and
+* limitations under the License. Contributor(s): The Initial Developer of the Original Software is NTG Clarity . , Inc.
+* Copyright 1997-2016 NTG Clarity. All Rights Reserved. CLASS NAME
+* <h4>Description</h4>
+* <h4>Notes</h4>
+* <h4>References</h4>
+* 
+ * @author: mandarineDeveloper <A HREF="mailto:hr@ntgclarity.com">mandarine Development Team</A>
+* @version Revision: 1.0 Date: 12/10/16 10:22 AM
+*/-->
+
+<dataset>
+	<vo_subscriber rec_id="10" msisdn="1234" user_name="person" deleted="0" password="0000" imsi_default="5678" impu="1591" impi="2244" smsc="7845"/>
+	<vo_subscriber rec_id="11" msisdn="1234" user_name="person2" deleted="1" password="0000" imsi_default="5679" impu="1591" impi="2244" smsc="7845"/>
+	<vo_subscriber rec_id="12" msisdn="1234" user_name="person3" deleted="0" password="0000" imsi_default="5680" impu="1591" impi="2244" smsc="7845"/>
+	<vo_subscriber rec_id="13" msisdn="1234567" user_name="person4" deleted="0" password="0000" imsi_default="567891011" impu="1591" impi="2244" smsc="7845"/>
+</dataset>

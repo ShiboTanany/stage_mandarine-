@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- /**
+* DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER. Copyright 1997-2016 NTG Clarity and/or its affiliates. All
+* rights reserved. NTG CLARITY is a leader in delivering network, telecom, IT and infrastructure solutions to network
+* service providers and medium and large enterprises. www.ntgclarity.com The contents of this file are subject to the
+* terms of "NTG Clarity License". You must not use this file except in compliance with the License. You can obtain a
+* copy of the License at http://www.ntgclarity.com/ See the License for the specific language governing permissions and
+* limitations under the License. Contributor(s): The Initial Developer of the Original Software is NTG Clarity . , Inc.
+* Copyright 1997-2016 NTG Clarity. All Rights Reserved. CLASS NAME
+* <h4>Description</h4>
+* <h4>Notes</h4>
+* <h4>References</h4>
+* 
+ * @author: mandarineDeveloper <A HREF="mailto:hr@ntgclarity.com">mandarine Development Team</A>
+* @version Revision: 1.0 Date: 12/10/16 10:22 AM
+*/-->
+
+<configuration>
+	<appender name="consoleAppender" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<Pattern>.%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg %n
+			</Pattern>
+		</encoder>
+		<!-- <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+			<level>TRACE</level>
+		</filter> -->
+		
+	</appender>
+ 
+  	<appender name="dailyRollingFileAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<File>log/service.log</File>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+		    <!-- daily rollover -->
+			<FileNamePattern>VO_WIFI_EMA.%d{yyyy-MM-dd}.log</FileNamePattern>
+ 
+			<!-- keep 30 days' worth of history -->
+			<maxHistory>30</maxHistory>			
+		</rollingPolicy>
+ 
+		<encoder>
+			<Pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{35} - %msg %n</Pattern>
+		</encoder> 	    
+  	</appender>
+ 	
+	<logger name="com.ntgclarity.mandarine" additivity="false">
+	    <level value="INFO" />
+		 <appender-ref ref="dailyRollingFileAppender"/> 
+		<appender-ref ref="consoleAppender" />
+	</logger>
+ 
+	<root>
+		<level value="INFO" />
+		<appender-ref ref="consoleAppender" />
+		 <appender-ref ref="dailyRollingFileAppender"/> 
+	</root>
+</configuration>

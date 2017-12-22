@@ -1,0 +1,120 @@
+<!-- /**
+* DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER. Copyright 1997-2016 NTG Clarity and/or its affiliates. All
+* rights reserved. NTG CLARITY is a leader in delivering network, telecom, IT and infrastructure solutions to network
+* service providers and medium and large enterprises. www.ntgclarity.com The contents of this file are subject to the
+* terms of "NTG Clarity License". You must not use this file except in compliance with the License. You can obtain a
+* copy of the License at http://www.ntgclarity.com/ See the License for the specific language governing permissions and
+* limitations under the License. Contributor(s): The Initial Developer of the Original Software is NTG Clarity . , Inc.
+* Copyright 1997-2016 NTG Clarity. All Rights Reserved. CLASS NAME
+* <h4>Description</h4>
+* <h4>Notes</h4>
+* <h4>References</h4>
+* 
+ * @author: mandarineDeveloper <A HREF="mailto:hr@ntgclarity.com">mandarine Development Team</A>
+* @version Revision: 1.0 Date: 12/10/16 10:22 AM
+*/-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>NTG Subscribers Manager</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Polyfill(s) for older browsers -->
+    <script src="node_modules/core-js/client/shim.min.js"></script>
+
+    <script src="node_modules/zone.js/dist/zone.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+
+    <script src="systemjs.config.js"></script>
+
+    <link href="theme/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="theme/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
+    <link href="theme/vendors/easypiechart/jquery.easy-pie-chart.css" rel="stylesheet" media="screen">
+    <link href="theme/assets/styles.css" rel="stylesheet" media="screen">
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <script src="theme/vendors/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    <script>
+      System.import('app').catch(function(err){ console.error(err); });
+    </script>
+    <style>
+      .modal
+      {
+        display: none;
+      }
+      @media (min-width: 1200px){
+        .span9 {
+          width: 1158px !important;
+        }
+      }
+
+    </style>
+  </head>
+
+  <body>
+  <div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container-fluid">
+        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+
+          <span class="icon-bar"> </span>
+        </a>
+        <a class="brand" href="#"> <img src="./app/images/download.jpg" style="height: 56pxpx;
+    width: 67px;" alt="NTG" draggable="false"></a>
+        <a class="brand" href="#"><b>NTG</b></a>
+        <div class="nav-collapse collapse">
+
+
+        </div>
+        <!--/.nav-collapse -->
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <!--<div class="span3" id="sidebar">-->
+        <!--<ul class="nav nav-list bs-docs-sidenav nav-collapse collapse">-->
+          <!--<li class="active">-->
+            <!--<a href="index.html"><i class="icon-chevron-right"></i> Dashboard</a>-->
+          <!--</li>-->
+          <!--</ul>-->
+        <!--</div>-->
+      <!--<div class="span9" id="content">-->
+      <div class="col-md-3"></div>
+      <div class="col-md-9 text-center"> <my-app><img src="./app/images/loading.gif"  /></my-app></div>
+
+      <!--</div>-->
+    </div>
+    <hr>
+    <footer>
+      <label class="text">POWERED BY</label>
+	  <a href="http://ntgclarity.com"><img src="./app/images/download.jpg" style="height: 83px;
+    width: 138px;" alt="NTG" draggable="false"></a>
+      <!--<p>&copy; NTG Clarity 2017</p>-->
+    </footer>
+    </div>
+    <!--/.fluid-container-->
+    <script src="theme/vendors/jquery-1.9.1.min.js"></script>
+    <script src="theme/bootstrap/js/bootstrap.min.js"></script>
+    <script src="theme/vendors/easypiechart/jquery.easy-pie-chart.js"></script>
+    <script src="theme/assets/scripts.js"></script>
+    <script>
+      $(function() {
+        // Easy pie charts
+        $('.chart').easyPieChart({animate: 1000});
+      });
+    </script>
+  <script>
+    window.onload=function(){
+      window.setTimeout(function(){
+        angular.bootstrap(document.body,[]);
+      },4000);
+    }
+  </script>
+  </body>
+</html>
